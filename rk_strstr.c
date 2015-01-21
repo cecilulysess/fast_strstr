@@ -1,29 +1,34 @@
 #include "rk_strstr.h"
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 
-#define PRIME 73
+#define PRIME 2
 #define MOD 19999999
+#define MASK 0x7FFFF  // 2^19 is prime
 
 char *rk_strstr(const char *haystack, const char *needle) {
+//  printf("IPT: %s\n\t%s\n", haystack, needle);
   if (!haystack || !needle) return NULL;
-  if (!*needle) return NULL;
+  if (!*needle) return (char*) haystack;
   
-  char* p = (char*) strchr(haystack, *needle);
-  char* q = (char*) needle;
-  int len = strlen(needle);
-  int hash = 0;
-  int roll = 0;
+  haystack = strchr(haystack, *needle);
+  if(!haystack) return NULL;
+  const char* p = haystack + 1;
+  const char* q =  needle + 1;
+  int hash = *haystack << 1;
+  int roll = *haystack << 1;
   while(*p && *q) {
-    roll = ((roll + *p++) * PRIME) % MOD;
-    hash = ((hash + *q++) * PRIME) % MOD;
+    roll = ((roll + *p++) << 1) & MASK;
+    hash = ((hash + *q++) << 1) & MASK;
   }
   if (*q) return NULL;
-  while(*p) {
-    if (hash == roll && memcmp(p - len,  needle, len) == 0 ) return p - len;
-    hash = (hash - *(p - len ) * PRIME) % MOD;
-    hash = (hash + *p) * PRIME % MOD;
-    p++;
+  int len = q - needle;
+  const char *head;
+  for(head = haystack; *p; p++) {
+    if (hash == roll && memcmp(head, needle, len) == 0 ) return (char*) head;
+    hash = (hash - (*head++<<1) ) & MASK;
+    hash = ((hash + *p) << 1) & MASK ;
   }
 
   return NULL;
