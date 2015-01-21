@@ -14,10 +14,10 @@ char *rk_strstr(const char *haystack, const char *needle) {
   
   haystack = strchr(haystack, *needle);
   if(!haystack) return NULL;
-  const char* p = haystack + 1;
-  const char* q =  needle + 1;
-  int hash = *haystack << 1;
-  int roll = *haystack << 1;
+  register const char* p = haystack + 1;
+  register const char* q =  needle + 1;
+  register int hash = *haystack << 1;
+  register int roll = *haystack << 1;
   while(*p && *q) {
     roll = ((roll + *p++) << 1) & MASK;
     hash = ((hash + *q++) << 1) & MASK;
@@ -28,7 +28,7 @@ char *rk_strstr(const char *haystack, const char *needle) {
   for(head = haystack; *p; p++) {
     if (hash == roll && memcmp(head, needle, len) == 0 ) return (char*) head;
     hash = (hash - (*head++<<1) ) & MASK;
-    hash = ((hash + *p) << 1) & MASK ;
+    hash = ((hash + *p) << 1) & MASK;
   }
 
   return NULL;

@@ -5,11 +5,11 @@ I fork this repo to make a comparison with classical implementations of rolling 
 
 | Algorithm \ Size  | 10                | 100               | 500              | 1000              |
 | ----------------- |:-----------------:|:-----------------:|:----------------:|:-----------------:|
-| strstr()          | 3.6 µs (1×)       | 12.4 µs (1×)      | 78.3 µs (1×)     | 161 µs (1×)       |
-| naive strstr()    | 9.7 µs (2.7×)     | 89.8 µs (7.2×)    | 479 µs (6.1×)    | 943 µs (5.8×)     |
-| Volnitsky         | 138 µs (39×)      | 146 µs (11.8×)    | 186 µs (2.4×)    | 239 µs (1.5×)     |
-| fast_strstr() | 2.3 µs (0.6×)**| 6.8 µs (0.5×)*| 48 µs (0.6×)**| 102 µs (0.6×) |
-| rk_strstr() | 1.62 us |
+| strstr()          |    2.57us (1x)    | 
+| naive strstr()    |    9.57us (3.72x) | 
+| Volnitsky         |    192.9us (74x)  |
+| fast_strstr()     |    1.78us (0.69x) |
+| rk_strstr()       |    1.62us (0.63x) |    
 
 
 | Algorithm \ Size  | 5000              | 10000             | 50000              | Full text (147277) |
