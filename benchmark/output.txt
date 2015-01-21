@@ -1,0 +1,334 @@
+warming up
+estimating clock resolution...
+mean is 5.165070 us (160001 iterations)
+found 56663 outliers among 159999 samples (35.4%)
+  34154 (21.3%) low severe
+  22509 (14.1%) high severe
+estimating cost of a clock call...
+mean is 2.604326 us (21 iterations)
+found 2 outliers among 21 samples (9.5%)
+  2 (9.5%) high mild
+
+benchmarking 10/strstr()
+mean: 4.827199 us, lb 4.446435 us, ub 5.493606 us, ci 0.950
+std dev: 2.528353 us, lb 1.645431 us, ub 3.830429 us, ci 0.950
+found 7 outliers among 100 samples (7.0%)
+  3 (3.0%) high mild
+  4 (4.0%) high severe
+variance introduced by outliers: 98.944%
+variance is severely inflated by outliers
+
+benchmarking 10/fast_strstr()
+mean: 2.481830 us, lb 2.258753 us, ub 2.763321 us, ci 0.950
+std dev: 1.274652 us, lb 1.052490 us, ub 1.563541 us, ci 0.950
+found 5 outliers among 100 samples (5.0%)
+  5 (5.0%) high mild
+variance introduced by outliers: 98.942%
+variance is severely inflated by outliers
+
+benchmarking 10/naive strstr()
+mean: 14.35614 us, lb 13.08026 us, ub 15.79048 us, ci 0.950
+std dev: 6.976977 us, lb 6.125683 us, ub 8.235925 us, ci 0.950
+found 1 outliers among 100 samples (1.0%)
+variance introduced by outliers: 98.935%
+variance is severely inflated by outliers
+
+benchmarking 10/Volnitsky's strstr()
+mean: 233.6965 us, lb 226.4971 us, ub 242.8189 us, ci 0.950
+std dev: 41.23771 us, lb 33.45315 us, ub 55.30343 us, ci 0.950
+found 6 outliers among 100 samples (6.0%)
+  5 (5.0%) high mild
+  1 (1.0%) high severe
+variance introduced by outliers: 92.566%
+variance is severely inflated by outliers
+
+benchmarking 10/rk_strstr()
+mean: 2.297618 us, lb 2.207699 us, ub 2.394092 us, ci 0.950
+std dev: 479.5732 ns, lb 427.7506 ns, ub 537.8956 ns, ci 0.950
+variance introduced by outliers: 94.676%
+variance is severely inflated by outliers
+
+benchmarking 100/strstr()
+mean: 9.679655 us, lb 9.069116 us, ub 10.39342 us, ci 0.950
+std dev: 3.367039 us, lb 2.936206 us, ub 3.877953 us, ci 0.950
+found 1 outliers among 100 samples (1.0%)
+variance introduced by outliers: 97.876%
+variance is severely inflated by outliers
+
+benchmarking 100/fast_strstr()
+mean: 6.876042 us, lb 6.525033 us, ub 7.290914 us, ci 0.950
+std dev: 1.948149 us, lb 1.630793 us, ub 2.489651 us, ci 0.950
+found 3 outliers among 100 samples (3.0%)
+  3 (3.0%) high mild
+variance introduced by outliers: 96.817%
+variance is severely inflated by outliers
+
+benchmarking 100/naive strstr()
+mean: 79.03507 us, lb 75.70128 us, ub 82.55772 us, ci 0.950
+std dev: 17.53941 us, lb 15.69950 us, ub 20.36548 us, ci 0.950
+variance introduced by outliers: 95.708%
+variance is severely inflated by outliers
+
+benchmarking 100/Volnitsky's strstr()
+mean: 258.3246 us, lb 247.4879 us, ub 274.3739 us, ci 0.950
+std dev: 66.88355 us, lb 48.73795 us, ub 95.41009 us, ci 0.950
+found 4 outliers among 100 samples (4.0%)
+  3 (3.0%) high severe
+variance introduced by outliers: 96.781%
+variance is severely inflated by outliers
+
+benchmarking 100/rk_strstr()
+mean: 8.371268 us, lb 8.049768 us, ub 8.848908 us, ci 0.950
+std dev: 1.968593 us, lb 1.449303 us, ub 3.295240 us, ci 0.950
+found 2 outliers among 100 samples (2.0%)
+  1 (1.0%) high severe
+variance introduced by outliers: 95.740%
+variance is severely inflated by outliers
+
+benchmarking 500/strstr()
+mean: 83.14129 us, lb 79.93354 us, ub 86.46069 us, ci 0.950
+std dev: 16.76902 us, lb 15.00612 us, ub 18.84500 us, ci 0.950
+variance introduced by outliers: 94.653%
+variance is severely inflated by outliers
+
+benchmarking 500/fast_strstr()
+mean: 44.83640 us, lb 42.74717 us, ub 47.27359 us, ci 0.950
+std dev: 11.53907 us, lb 9.994435 us, ub 14.77052 us, ci 0.950
+found 1 outliers among 100 samples (1.0%)
+variance introduced by outliers: 96.778%
+variance is severely inflated by outliers
+
+benchmarking 500/naive strstr()
+mean: 347.2697 us, lb 327.7837 us, ub 370.7226 us, ci 0.950
+std dev: 109.1784 us, lb 94.01843 us, ub 139.8080 us, ci 0.950
+found 1 outliers among 100 samples (1.0%)
+variance introduced by outliers: 97.848%
+variance is severely inflated by outliers
+
+benchmarking 500/Volnitsky's strstr()
+mean: 336.2658 us, lb 320.6069 us, ub 359.0762 us, ci 0.950
+std dev: 95.69161 us, lb 71.99354 us, ub 133.8701 us, ci 0.950
+found 5 outliers among 100 samples (5.0%)
+  3 (3.0%) high mild
+  2 (2.0%) high severe
+variance introduced by outliers: 96.818%
+variance is severely inflated by outliers
+
+benchmarking 500/rk_strstr()
+mean: 112.1957 us, lb 105.6880 us, ub 120.5185 us, ci 0.950
+std dev: 37.64240 us, lb 30.87415 us, ub 47.94081 us, ci 0.950
+found 6 outliers among 100 samples (6.0%)
+  4 (4.0%) high mild
+  2 (2.0%) high severe
+variance introduced by outliers: 97.867%
+variance is severely inflated by outliers
+
+benchmarking 1000/strstr()
+mean: 259.1998 us, lb 247.1697 us, ub 273.5801 us, ci 0.950
+std dev: 67.10431 us, lb 55.35749 us, ub 83.30212 us, ci 0.950
+found 6 outliers among 100 samples (6.0%)
+  5 (5.0%) high mild
+  1 (1.0%) high severe
+variance introduced by outliers: 96.781%
+variance is severely inflated by outliers
+
+benchmarking 1000/fast_strstr()
+mean: 95.25706 us, lb 89.56845 us, ub 102.1164 us, ci 0.950
+std dev: 31.96963 us, lb 27.06461 us, ub 40.93373 us, ci 0.950
+found 3 outliers among 100 samples (3.0%)
+  3 (3.0%) high mild
+variance introduced by outliers: 97.867%
+variance is severely inflated by outliers
+
+benchmarking 1000/naive strstr()
+mean: 888.6209 us, lb 819.6627 us, ub 970.0591 us, ci 0.950
+std dev: 381.5096 us, lb 323.6572 us, ub 461.9481 us, ci 0.950
+found 4 outliers among 100 samples (4.0%)
+  4 (4.0%) high mild
+variance introduced by outliers: 98.917%
+variance is severely inflated by outliers
+
+benchmarking 1000/Volnitsky's strstr()
+mean: 411.5467 us, lb 390.6583 us, ub 448.7040 us, ci 0.950
+std dev: 138.9389 us, lb 92.12551 us, ub 235.8846 us, ci 0.950
+found 9 outliers among 100 samples (9.0%)
+  4 (4.0%) high mild
+  5 (5.0%) high severe
+variance introduced by outliers: 97.868%
+variance is severely inflated by outliers
+
+benchmarking 1000/rk_strstr()
+mean: 215.3931 us, lb 207.0180 us, ub 225.6500 us, ci 0.950
+std dev: 47.03840 us, lb 39.33551 us, ub 57.58233 us, ci 0.950
+found 7 outliers among 100 samples (7.0%)
+  6 (6.0%) high mild
+  1 (1.0%) high severe
+variance introduced by outliers: 95.698%
+variance is severely inflated by outliers
+
+benchmarking 5000/strstr()
+mean: 1.577114 ms, lb 1.477871 ms, ub 1.718908 ms, ci 0.950
+std dev: 599.7600 us, lb 455.4435 us, ub 817.1561 us, ci 0.950
+found 12 outliers among 100 samples (12.0%)
+  5 (5.0%) high mild
+  7 (7.0%) high severe
+variance introduced by outliers: 98.894%
+variance is severely inflated by outliers
+
+benchmarking 5000/fast_strstr()
+mean: 666.8527 us, lb 617.7737 us, ub 731.2365 us, ci 0.950
+std dev: 286.9188 us, lb 225.1815 us, ub 401.2075 us, ci 0.950
+found 3 outliers among 100 samples (3.0%)
+  2 (2.0%) high mild
+  1 (1.0%) high severe
+variance introduced by outliers: 98.917%
+variance is severely inflated by outliers
+
+benchmarking 5000/naive strstr()
+mean: 3.231800 ms, lb 3.039606 ms, ub 3.817631 ms, ci 0.950
+std dev: 1.577086 ms, lb 633.5795 us, ub 3.472334 ms, ci 0.950
+found 4 outliers among 100 samples (4.0%)
+  3 (3.0%) high mild
+  1 (1.0%) high severe
+variance introduced by outliers: 98.936%
+variance is severely inflated by outliers
+
+benchmarking 5000/Volnitsky's strstr()
+mean: 825.9772 us, lb 796.4653 us, ub 887.3783 us, ci 0.950
+std dev: 209.7865 us, lb 124.8265 us, ub 411.9808 us, ci 0.950
+found 2 outliers among 100 samples (2.0%)
+  1 (1.0%) high severe
+variance introduced by outliers: 96.772%
+variance is severely inflated by outliers
+
+benchmarking 5000/rk_strstr()
+mean: 953.1500 us, lb 930.5418 us, ub 977.5978 us, ci 0.950
+std dev: 120.6249 us, lb 105.4409 us, ub 151.4360 us, ci 0.950
+found 1 outliers among 100 samples (1.0%)
+variance introduced by outliers: 86.262%
+variance is severely inflated by outliers
+
+benchmarking 10000/strstr()
+mean: 2.394954 ms, lb 2.256525 ms, ub 2.594448 ms, ci 0.950
+std dev: 838.2704 us, lb 639.0159 us, ub 1.311389 ms, ci 0.950
+found 7 outliers among 100 samples (7.0%)
+  6 (6.0%) high mild
+  1 (1.0%) high severe
+variance introduced by outliers: 97.878%
+variance is severely inflated by outliers
+
+benchmarking 10000/fast_strstr()
+mean: 826.5106 us, lb 784.0786 us, ub 873.6322 us, ci 0.950
+std dev: 228.9529 us, lb 203.7774 us, ub 261.3331 us, ci 0.950
+variance introduced by outliers: 96.808%
+variance is severely inflated by outliers
+
+benchmarking 10000/naive strstr()
+mean: 7.290444 ms, lb 6.831056 ms, ub 7.849213 ms, ci 0.950
+std dev: 2.594091 ms, lb 2.204207 ms, ub 3.146917 ms, ci 0.950
+found 2 outliers among 100 samples (2.0%)
+  2 (2.0%) high mild
+variance introduced by outliers: 98.879%
+variance is severely inflated by outliers
+
+benchmarking 10000/Volnitsky's strstr()
+mean: 1.652657 ms, lb 1.591679 ms, ub 1.727423 ms, ci 0.950
+std dev: 344.9628 us, lb 290.2577 us, ub 437.4425 us, ci 0.950
+found 2 outliers among 100 samples (2.0%)
+  2 (2.0%) high mild
+variance introduced by outliers: 94.676%
+variance is severely inflated by outliers
+
+benchmarking 10000/rk_strstr()
+mean: 2.224852 ms, lb 2.118139 ms, ub 2.362749 ms, ci 0.950
+std dev: 621.8245 us, lb 502.4351 us, ub 763.4720 us, ci 0.950
+found 11 outliers among 100 samples (11.0%)
+  4 (4.0%) high mild
+  7 (7.0%) high severe
+variance introduced by outliers: 96.812%
+variance is severely inflated by outliers
+
+benchmarking 50000/strstr()
+mean: 11.06409 ms, lb 10.73591 ms, ub 11.45451 ms, ci 0.950
+std dev: 1.834244 ms, lb 1.564671 ms, ub 2.407923 ms, ci 0.950
+found 2 outliers among 100 samples (2.0%)
+  2 (2.0%) high mild
+variance introduced by outliers: 91.519%
+variance is severely inflated by outliers
+
+benchmarking 50000/fast_strstr()
+mean: 4.626800 ms, lb 4.385590 ms, ub 4.993164 ms, ci 0.950
+std dev: 1.501988 ms, lb 1.119171 ms, ub 2.512694 ms, ci 0.950
+found 1 outliers among 100 samples (1.0%)
+  1 (1.0%) high severe
+variance introduced by outliers: 97.858%
+variance is severely inflated by outliers
+
+benchmarking 50000/naive strstr()
+mean: 26.85981 ms, lb 26.09393 ms, ub 27.86156 ms, ci 0.950
+std dev: 4.455060 ms, lb 3.600723 ms, ub 5.715957 ms, ci 0.950
+found 6 outliers among 100 samples (6.0%)
+  4 (4.0%) high mild
+  2 (2.0%) high severe
+variance introduced by outliers: 91.519%
+variance is severely inflated by outliers
+
+benchmarking 50000/Volnitsky's strstr()
+mean: 9.358691 ms, lb 9.156486 ms, ub 9.624101 ms, ci 0.950
+std dev: 1.189823 ms, lb 970.4179 us, ub 1.475283 ms, ci 0.950
+found 15 outliers among 100 samples (15.0%)
+  7 (7.0%) high mild
+  8 (8.0%) high severe
+variance introduced by outliers: 86.268%
+variance is severely inflated by outliers
+
+benchmarking 50000/rk_strstr()
+mean: 9.780006 ms, lb 9.498407 ms, ub 10.20407 ms, ci 0.950
+std dev: 1.758161 ms, lb 1.306663 ms, ub 2.607858 ms, ci 0.950
+found 11 outliers among 100 samples (11.0%)
+  8 (8.0%) high mild
+  3 (3.0%) high severe
+variance introduced by outliers: 92.582%
+variance is severely inflated by outliers
+
+benchmarking 147277/strstr()
+mean: 27.47971 ms, lb 26.52511 ms, ub 28.78487 ms, ci 0.950
+std dev: 5.640851 ms, lb 4.460529 ms, ub 7.609734 ms, ci 0.950
+found 4 outliers among 100 samples (4.0%)
+  2 (2.0%) high mild
+  2 (2.0%) high severe
+variance introduced by outliers: 94.665%
+variance is severely inflated by outliers
+
+benchmarking 147277/fast_strstr()
+mean: 10.26332 ms, lb 10.01653 ms, ub 10.65650 ms, ci 0.950
+std dev: 1.568979 ms, lb 1.144456 ms, ub 2.386718 ms, ci 0.950
+found 10 outliers among 100 samples (10.0%)
+  9 (9.0%) high severe
+variance introduced by outliers: 90.446%
+variance is severely inflated by outliers
+
+benchmarking 147277/naive strstr()
+collecting 100 samples, 1 iterations each, in estimated 7.587695 s
+mean: 75.62628 ms, lb 74.19555 ms, ub 77.49845 ms, ci 0.950
+std dev: 8.361601 ms, lb 6.937541 ms, ub 10.97247 ms, ci 0.950
+found 6 outliers among 100 samples (6.0%)
+  5 (5.0%) high mild
+  1 (1.0%) high severe
+variance introduced by outliers: 82.119%
+variance is severely inflated by outliers
+
+benchmarking 147277/Volnitsky's strstr()
+mean: 49.79874 ms, lb 48.91816 ms, ub 50.81837 ms, ci 0.950
+std dev: 4.866348 ms, lb 4.304337 ms, ub 5.780001 ms, ci 0.950
+found 1 outliers among 100 samples (1.0%)
+variance introduced by outliers: 78.953%
+variance is severely inflated by outliers
+
+benchmarking 147277/rk_strstr()
+mean: 27.01456 ms, lb 26.76531 ms, ub 27.30756 ms, ci 0.950
+std dev: 1.384415 ms, lb 1.171848 ms, ub 1.927474 ms, ci 0.950
+found 1 outliers among 100 samples (1.0%)
+  1 (1.0%) high severe
+variance introduced by outliers: 49.453%
+variance is moderately inflated by outliers

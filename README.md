@@ -2,22 +2,26 @@ Compare classic strstr implementations
 ======================================
 I fork this repo to make a comparison with classical implementations of rolling hash and KMP.
 
+rk_strstr is a Rolling Hash implementation. In the test, I found it's about 10 times slower than strstr normally. So, I use special prime number 2 and prime modular 2^19 - 1. With this special case, the multiply operation becomes left shift 1 and modular become bitwise and.
+
+As you can see from the testing result. My implementation still cannot beat the fast_strstr since I do two more operation for each character. However, my implementation of rolling hash do beat strstr in most case. 
 
 | Algorithm \ Size  | 10                | 100               | 500              | 1000              |
 | ----------------- |:-----------------:|:-----------------:|:----------------:|:-----------------:|
-| strstr()          |    2.57us (1x)    | 
-| naive strstr()    |    9.57us (3.72x) | 
-| Volnitsky         |    192.9us (74x)  |
-| fast_strstr()     |    1.78us (0.69x) |
-| rk_strstr()       |    1.62us (0.63x) |    
+| strstr()          |    4.83us (1x)    |   9.68us (1x)    |    83.14us (1x)   |  259.20us (1x)   |
+| naive strstr()    |    14.36us (2.97x)|   79.04us (8.17x)|  347.27us (4.18x) |  888.62us (3.4x) |
+| Volnitsky         |   233.70us (48x)  |  258.32us (26.7x)|  336.27us (4.04x) |  411.54us (1.6x) |
+| fast_strstr()     |    2.48us (.51x)  |    6.53us (.67x) |   44.84us (0.54x) |   95.25us (.36x) |
+| rk_strstr()       |    2.29us (.47x)  |    8.37us (.86x) |  112.20us (1.34x) |  215.39us (.83x) | 
 
 
 | Algorithm \ Size  | 5000              | 10000             | 50000              | Full text (147277) |
 | ----------------- |:-----------------:|:-----------------:|:------------------:|:------------------:|
-| strstr()          | 841 µs (1×)       | 1.7 ms (1×)       | 8.5 ms (1×)        | 25.2 ms (1×)       |
-| naive strstr()    | 4.8 ms (5.6×)     | 9.6 ms (5.6×)     | 48 ms (5.6×)       | 140 ms (5.52×)     |
-| Volnitsky         | 635 µs (0.7×)     | 1.3 ms (0.8×)     | 10 ms (1.2×)       | 58.6 ms (2.3×)     |
-| **fast_strstr()** | **540 µs (0.6×)** | **1.1 ms (0.6×)** | **5.5 ms (0.6×)**  | **17.2 ms (0.6×)** |
+| strstr()          |      1.58ms (1x)  |     2.39ms (1x)   |    11.06ms (1x)    |      27.48ms (1x)  |
+| naive strstr()    |    3.23ms (2x)    |     7.29ms (3x)   |    26.85ms (2.4x)  |      75.62ms (2.8x)|
+| Volnitsky         |  825.97us (.52x)  |     1.65ms (.69x) |     9.39ms (.84x)  |      49.80ms (1.8x)|
+| fast_strstr()     |  666.85us (.43x)  |   826.51us (.34x) |     4.62ms (.41x)  |      10.26ms (.37x)|
+| rk_strstr()       |  953.15us (.61x)  |     2.22ms (.93x) |     9.78ms (.88x)  |      27.01ms (.98x)|
 
 
 -------------------------------------------------------------------------------
